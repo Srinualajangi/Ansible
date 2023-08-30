@@ -29,5 +29,5 @@
       name: mongod
       state: restarted
 
-  - name: Checking port is availble or not
-    - shell: netstat -tnlp 
+  - shell: netstat -tnlp
+       
