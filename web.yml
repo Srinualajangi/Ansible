@@ -19,27 +19,27 @@
       state: absent
 
   - name: Creating our desired directory
-     ansible.builtin.file:
+    ansible.builtin.file:
       name: /usr/share/nginx/html
       state: directory
     
   - name: Downloading web artifact
-      ansible.builtin.get_url: 
-        url: https://roboshop-builds.s3.amazonaws.com/web.zip
-        dest: /tmp
+    ansible.builtin.get_url: 
+      url: https://roboshop-builds.s3.amazonaws.com/web.zip
+      dest: /tmp
 
   - name: Unzipping the artifact
-      ansible.builtin.unarchive: 
-        src: /tmp/web.zip
-        dest: usr/share/nginx/html
-        remote_src: yes
+    ansible.builtin.unarchive: 
+      src: /tmp/web.zip
+      dest: usr/share/nginx/html
+      remote_src: yes
 
   - name: copying the roboshop.conf file 
-      ansible.builtin.copy:
-        src: roboshop.conf
-        dest: /etc/nginx/default.d/roboshop.conf
+    ansible.builtin.copy:
+      src: roboshop.conf
+      dest: /etc/nginx/default.d/roboshop.conf
     
   - name: restart the nginx
-      ansible.builtin.service:
-        name: nginx
-        state: restarted
+    ansible.builtin.service:
+      name: nginx
+      state: restarted
