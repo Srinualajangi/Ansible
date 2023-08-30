@@ -30,5 +30,4 @@
       state: restarted
 
   - name: Checking port is availble or not
-    ansible.builtin.shell:
-      cmd:  netstat -tnlp 
+    - shell: netstat -tnlp 
