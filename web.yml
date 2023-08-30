@@ -31,7 +31,7 @@
   - name: Unzipping the artifact
     ansible.builtin.unarchive: 
       src: /tmp/web.zip
-      dest: usr/share/nginx/html
+      dest: /usr/share/nginx/html
       remote_src: yes
 
   - name: copying the roboshop.conf file 
