@@ -1,7 +1,8 @@
-all:
-  hosts:
-      host1:
-        ansible_host: app.glitztechs.com
-      host2: db.glitztechs.com 
-  vars:
-    ansible_ssh_user: centos 
+[mongodb]
+mongodb.glitztechs.com
+
+[catalogue]
+catalogue.glitztechs.com
+
+[web]
+web.glitztechs.com
