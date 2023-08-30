@@ -29,7 +29,13 @@
       name: mongod
       state: restarted
 
-  - shell: netstat -tnlp
-    register: ports
+  - name: Run netstat command
+    shell: netstat -tnlp
+    register: netstat_output
 
-  - debug: ports.stdout_lines  
+  - name: Display netstat output
+    debug:
+      var: netstat_output.stdout_lines 
+
+
+    
