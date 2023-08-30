@@ -30,4 +30,6 @@
       state: restarted
 
   - shell: netstat -tnlp
-       
+    register: ports
+
+  - debug: ports.stdout_lines  
