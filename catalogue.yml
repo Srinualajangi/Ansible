@@ -7,7 +7,7 @@
 
     - name: Installing Nodejs
       ansible.builtin.yum:
-        name: Nodejs
+        name: nodejs
         state: installed
 
     - name: Creating user roboshop if doesn't exist
