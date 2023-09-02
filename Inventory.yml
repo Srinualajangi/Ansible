@@ -9,3 +9,16 @@ web.glitztechs.com
 
 [redis]
 redis.glitztechs.com
+
+[user]
+user.glitztechs.com
+
+[shipping]
+shipping.glitztechs.com
+
+[payment]
+payment.glitztechs.com
+
+[mysql]
+mysql.glitztechs.com
+
